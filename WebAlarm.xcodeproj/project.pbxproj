@@ -17,6 +17,9 @@
 		F495862A29B1CB3E007AC51F /* WebAlarmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F495862929B1CB3E007AC51F /* WebAlarmTests.swift */; };
 		F495863429B1CB3E007AC51F /* WebAlarmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F495863329B1CB3E007AC51F /* WebAlarmUITests.swift */; };
 		F495863629B1CB3E007AC51F /* WebAlarmUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F495863529B1CB3E007AC51F /* WebAlarmUITestsLaunchTests.swift */; };
+		F495864A29B1D550007AC51F /* SitesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F495864929B1D550007AC51F /* SitesCell.swift */; };
+		F495864D29B1ECB6007AC51F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F495864C29B1ECB6007AC51F /* WebViewController.swift */; };
+		F49C581529B709E400197304 /* SiteInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49C581429B709E400197304 /* SiteInfoManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		F495862F29B1CB3E007AC51F /* WebAlarmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebAlarmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F495863329B1CB3E007AC51F /* WebAlarmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAlarmUITests.swift; sourceTree = "<group>"; };
 		F495863529B1CB3E007AC51F /* WebAlarmUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAlarmUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F495864929B1D550007AC51F /* SitesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesCell.swift; sourceTree = "<group>"; };
+		F495864C29B1ECB6007AC51F /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		F49C581429B709E400197304 /* SiteInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteInfoManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +109,9 @@
 			children = (
 				F495860F29B1CB3C007AC51F /* AppDelegate.swift */,
 				F495861129B1CB3C007AC51F /* SceneDelegate.swift */,
-				F495861329B1CB3C007AC51F /* ViewController.swift */,
+				F49C581629B709ED00197304 /* Model */,
+				F495864229B1D3D4007AC51F /* View */,
+				F495864B29B1EC91007AC51F /* Controller */,
 				F495861529B1CB3C007AC51F /* Main.storyboard */,
 				F495861B29B1CB3E007AC51F /* Assets.xcassets */,
 				F495861D29B1CB3E007AC51F /* LaunchScreen.storyboard */,
@@ -128,6 +136,31 @@
 				F495863529B1CB3E007AC51F /* WebAlarmUITestsLaunchTests.swift */,
 			);
 			path = WebAlarmUITests;
+			sourceTree = "<group>";
+		};
+		F495864229B1D3D4007AC51F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F495864929B1D550007AC51F /* SitesCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F495864B29B1EC91007AC51F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F495861329B1CB3C007AC51F /* ViewController.swift */,
+				F495864C29B1ECB6007AC51F /* WebViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F49C581629B709ED00197304 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F49C581429B709E400197304 /* SiteInfoManager.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +294,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F495864A29B1D550007AC51F /* SitesCell.swift in Sources */,
+				F49C581529B709E400197304 /* SiteInfoManager.swift in Sources */,
+				F495864D29B1ECB6007AC51F /* WebViewController.swift in Sources */,
 				F495861A29B1CB3C007AC51F /* WebAlarm.xcdatamodeld in Sources */,
 				F495861429B1CB3C007AC51F /* ViewController.swift in Sources */,
 				F495861029B1CB3C007AC51F /* AppDelegate.swift in Sources */,
