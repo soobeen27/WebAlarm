@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import SafariServices
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, SFSafariViewControllerDelegate {
     
     let siteInfoManager = SiteInfoManager()
     var data: [FavSites] = [FavSites(urlString: "https://m.comic.naver.com/webtoon/weekday", img: UIImage(systemName: "n.square")!),FavSites(urlString: "https://webtoon.kakao.com", img: UIImage(systemName: "k.square")!) ]
@@ -54,6 +55,17 @@ class ViewController: UIViewController {
     }
     
     
+    func loadSafari(urlString: String){
+        if let url = URL(string: urlString) {
+            let safariViewController = SFSafariViewController(url: url)
+            safariViewController.delegate = self
+                if let navigationController = safariViewController.navigationController {
+                    navigationController.hidesBarsOnSwipe = true
+                }
+            navigationController?.pushViewController(safariViewController, animated: true)
+
+        }
+    }
     
     func setNavigationView() {
         view.backgroundColor = .gray
@@ -95,11 +107,12 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let webVC = WebViewController()
-        //        let array = memberListManager.getMemberList()
-        //        detailVC.member = array[indexPath.row]
-        webVC.urlString = data[indexPath.row].urlString
-        navigationController?.pushViewController(webVC, animated: false)
+//        let webVC = WebViewController()
+//        //        let array = memberListManager.getMemberList()
+//        //        detailVC.member = array[indexPath.row]
+//        webVC.urlString = data[indexPath.row].urlString
+//        navigationController?.pushViewController(webVC, animated: false)
+        loadSafari(urlString: data[indexPath.row].urlString)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -108,11 +121,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SitesCell", for: indexPath) as! SitesCell
-        let thumnailUrl = self.data[indexPath.row].urlString
-        let url = NSURL(string: thumnailUrl)! as URL
-        siteInfoManager.getThumbnail(from: url , completion: { img in
-            cell.data = img
-        })
+        cell.data = self.data[indexPath.row].img
         return cell
     }
     
