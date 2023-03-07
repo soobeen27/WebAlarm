@@ -54,19 +54,6 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
         // Do any additional setup after loading the view.
     }
     
-    
-    func loadSafari(urlString: String){
-        if let url = URL(string: urlString) {
-            let safariViewController = SFSafariViewController(url: url)
-            safariViewController.delegate = self
-                if let navigationController = safariViewController.navigationController {
-                    navigationController.hidesBarsOnSwipe = true
-                }
-            navigationController?.pushViewController(safariViewController, animated: true)
-
-        }
-    }
-    
     func setNavigationView() {
         view.backgroundColor = .gray
         let appearance = UINavigationBarAppearance()
@@ -107,12 +94,11 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let webVC = WebViewController()
-//        //        let array = memberListManager.getMemberList()
-//        //        detailVC.member = array[indexPath.row]
-//        webVC.urlString = data[indexPath.row].urlString
-//        navigationController?.pushViewController(webVC, animated: false)
-        loadSafari(urlString: data[indexPath.row].urlString)
+        let webVC = WebViewController()
+        //        let array = memberListManager.getMemberList()
+        //        detailVC.member = array[indexPath.row]
+        webVC.urlString = data[indexPath.row].urlString
+        navigationController?.pushViewController(webVC, animated: false)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
