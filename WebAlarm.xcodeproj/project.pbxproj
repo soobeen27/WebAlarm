@@ -20,6 +20,9 @@
 		F495864A29B1D550007AC51F /* SitesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F495864929B1D550007AC51F /* SitesCell.swift */; };
 		F495864D29B1ECB6007AC51F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F495864C29B1ECB6007AC51F /* WebViewController.swift */; };
 		F49C581529B709E400197304 /* SiteInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49C581429B709E400197304 /* SiteInfoManager.swift */; };
+		F49C581C29BAE99000197304 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49C581B29BAE99000197304 /* AddViewController.swift */; };
+		F49C581E29BAF9B000197304 /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49C581D29BAF9B000197304 /* Week.swift */; };
+		F49C582129BB3EEB00197304 /* FavLinkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49C582029BB3EEB00197304 /* FavLinkCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		F495864929B1D550007AC51F /* SitesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitesCell.swift; sourceTree = "<group>"; };
 		F495864C29B1ECB6007AC51F /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		F49C581429B709E400197304 /* SiteInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteInfoManager.swift; sourceTree = "<group>"; };
+		F49C581B29BAE99000197304 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		F49C581D29BAF9B000197304 /* Week.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
+		F49C582029BB3EEB00197304 /* FavLinkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavLinkCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,7 @@
 				F495861D29B1CB3E007AC51F /* LaunchScreen.storyboard */,
 				F495862029B1CB3E007AC51F /* Info.plist */,
 				F495861829B1CB3C007AC51F /* WebAlarm.xcdatamodeld */,
+				F49C581F29BAFB0900197304 /* Helper */,
 			);
 			path = WebAlarm;
 			sourceTree = "<group>";
@@ -142,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				F495864929B1D550007AC51F /* SitesCell.swift */,
+				F49C582029BB3EEB00197304 /* FavLinkCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -151,6 +159,7 @@
 			children = (
 				F495861329B1CB3C007AC51F /* ViewController.swift */,
 				F495864C29B1ECB6007AC51F /* WebViewController.swift */,
+				F49C581B29BAE99000197304 /* AddViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -161,6 +170,14 @@
 				F49C581429B709E400197304 /* SiteInfoManager.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F49C581F29BAFB0900197304 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F49C581D29BAF9B000197304 /* Week.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,9 +313,12 @@
 			files = (
 				F495864A29B1D550007AC51F /* SitesCell.swift in Sources */,
 				F49C581529B709E400197304 /* SiteInfoManager.swift in Sources */,
+				F49C581C29BAE99000197304 /* AddViewController.swift in Sources */,
 				F495864D29B1ECB6007AC51F /* WebViewController.swift in Sources */,
 				F495861A29B1CB3C007AC51F /* WebAlarm.xcdatamodeld in Sources */,
+				F49C581E29BAF9B000197304 /* Week.swift in Sources */,
 				F495861429B1CB3C007AC51F /* ViewController.swift in Sources */,
+				F49C582129BB3EEB00197304 /* FavLinkCell.swift in Sources */,
 				F495861029B1CB3C007AC51F /* AppDelegate.swift in Sources */,
 				F495861229B1CB3C007AC51F /* SceneDelegate.swift in Sources */,
 			);

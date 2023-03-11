@@ -8,10 +8,10 @@ class WebViewController: UIViewController, WKUIDelegate {
     var urlString: String!
     //    let favUrl: String!
     
-    //    lazy var addFavBtn: UIBarButtonItem = {
-    //        let btn = UIBarButtonItem(image: UIImage(systemName: "hand.thumbsup"), style: .plain, target: self, action: #selector(addFavBtnPressed))
-    //        return btn
-    //    }()
+        lazy var addFavBtn: UIBarButtonItem = {
+            let btn = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addFavBtnPressed))
+            return btn
+        }()
     
     override func loadView() {
         let webConfiguration = WKWebViewConfiguration()
@@ -33,15 +33,24 @@ class WebViewController: UIViewController, WKUIDelegate {
     }
     func setNav() {
         self.navigationController?.hidesBarsOnSwipe = true
+        self.navigationItem.rightBarButtonItem = self.addFavBtn
+    }
+    
+    @objc func addFavBtnPressed() {
+        let modalVC = AddViewController()
+        modalVC.modalPresentationStyle = .pageSheet
+        
+        if let url = webView.url {
+            modalVC.testlabel.text = url.absoluteString
+        }
+        
+        present(modalVC, animated: true, completion: nil)
+
+        
     }
 }
     
-//    @objc func addFavBtnPressed() {
-//        if let url = webView.url {
-////            favUrl.favUrl.append(url.absoluteString)
-//            print(favUrl.favUrl)
-//        }
-//    }
+
 
 
 //let script = """
